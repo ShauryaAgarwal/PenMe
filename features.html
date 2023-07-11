@@ -1,0 +1,350 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PenMe - Features</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    /* Font */
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+    body {
+      font-family: "Montserrat", sans-serif;
+    }
+
+    /* Global Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #333;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo img {
+      height: 50px;
+      margin-right: 15px;
+      vertical-align: middle;
+    }
+
+    .logo-text {
+      font-size: 28px;
+      font-weight: bold;
+      color: #fff;
+      line-height: 30px;
+      vertical-align: middle;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav-links li {
+      margin-left: 30px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    /* Main Banner */
+    .main-banner {
+      background-color: #7d8790;
+      color: #fff;
+      padding: 100px 0;
+      height: 200px;
+      text-align: center;
+    }
+
+    .banner-title {
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    .banner-subtitle {
+      font-size: 18px;
+    }
+
+    /* Content Section */
+    .content-section {
+      background-color: #f8f8ff;
+      padding: 20px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    .feature {
+      display: flex;
+      margin-bottom: 50px;
+      align-items: center;
+    }
+
+    .feature-image {
+      flex: 0 0 35%;
+      max-width: 35%;
+      margin-right: 25px;
+      text-align: center;
+    }
+
+    .feature-image img {
+      width: 85%;
+      height: auto;
+    }
+
+    .feature-description {
+      flex: 0 0 60%;
+      max-width: 60%;
+      text-align: left;
+    }
+
+    .feature-title {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .feature-text {
+      font-size: 18px;
+    }
+
+    .feature-description:before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    /* Call-to-Action Section */
+    .additional-section {
+      background-color: #dde1e2;
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 36px;
+      font-weight: bold;
+      color: #000;
+      margin-bottom: 20px;
+    }
+
+    .section-divider {
+      border: 2px solid #000;
+      width: 100px;
+      margin: 0 auto 20px;
+    }
+
+    .section-text {
+      font-size: 18px;
+      color: #000;
+      margin-bottom: 30px;
+    }
+
+    .learn-more-button {
+      display: inline-block;
+      padding: 10px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #ff3b30;
+      text-decoration: none;
+      border-radius: 30px;
+    }
+
+    .learn-more-button:hover {
+      background-color: #e62c22;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #011627;
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .footer-columns {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .footer-column {
+      flex: 0 0 30%;
+      flex-basis: 30%;
+      margin-bottom: 20px;
+    }
+
+    .footer-column p {
+      margin-bottom: 15px;
+    }
+
+    .footer-column:last-child p {
+      line-height: 1.5;
+    }
+
+    .footer-heading {
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .footer-menu {
+      text-align: center;
+    }
+
+    .footer-menu ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-menu li {
+      margin-bottom: 10px;
+      max-width: 120px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-menu li a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .footer-bottom {
+      font-size: 14px;
+    }
+
+    .powered-by {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/69/d4/d8/69d4d883-45db-1f7a-a03d-c059a8884486/AppIcon-0-0-1x_U007emarketing-0-7-0-0-85-220.png/230x0w.webp" alt="PenMe Logo">
+      <span class="logo-text">PenMe</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="guide.html">Guide</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="download.html">Download</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Banner -->
+  <section class="main-banner">
+    <div class="banner-content">
+      <h1 class="banner-title">Features</h1>
+      <p class="banner-subtitle">Explore the powerful features that make PenMe the ultimate tool for personalized and heartfelt digital messaging.</p>
+    </div>
+  </section>
+
+  <!-- Page Content -->
+  <section class="content-section">
+    <div class="container">
+      <h2 class="section-title">Take a look at the art of possibilities within PenMe's messaging capabilities</h2>
+      <div class="feature">
+        <div class="feature-image">
+          <img src="https://i0.wp.com/www.penme.app/wp-content/uploads/2022/12/image10.png?ssl=1" alt="Feature Image">
+        </div>
+        <div class="feature-description">
+          <h3 class="feature-title">Write Handwritten Messages Digitally</h3>
+          <p class="feature-text">Express your thoughts with the personal touch of handwriting. Use a digital pen or your fingertips to write heartfelt messages directly on your device.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-image">
+          <img src="https://i0.wp.com/www.penme.app/wp-content/uploads/2022/12/Picture-handwritten-message.png?ssl=1" alt="Feature Image">
+        </div>
+        <div class="feature-description">
+          <h3 class="feature-title">Auto-Assembly for Any Device</h3>
+          <p class="feature-text">PenMe automatically adjusts your handwritten messages to fit any device type or screen size. Your messages will always look perfect, whether it's a smartphone, tablet, or computer.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-image">
+          <img src="https://i0.wp.com/www.penme.app/wp-content/uploads/2022/12/image7.png?ssl=1" alt="Feature Image">
+        </div>
+        <div class="feature-description">
+          <h3 class="feature-title">Collaboration Workflows</h3>
+          <p class="feature-text">Effortlessly collaborate with globally distributed teams. PenMe enables you to send handwritten group greeting cards, letters, or messages, making it easy to work together and share the joy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call-to-Action -->
+  <section class="additional-section">
+    <div class="container">
+      <h2 class="section-title">Bring a Personal Touch to Your Messaging</h2>
+      <hr class="section-divider">
+      <p class="section-text">Make your loved ones feel special</p>
+      <a href="download.html" class="learn-more-button">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h3 class="footer-heading">About</h3>
+        <p>Founded in 2019 as a Delaware-based start-up, PenMe brings in disruptive and patent-pending solutions to digitally transform the personal messaging, e-cards, and digital payment domains. We make communication natural using a digital pen or your fingertips.</p>
+      </div>
+      <div class="footer-column">
+        <div class="footer-menu">
+          <h3 class="footer-heading">Navigation</h3>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="guide.html">Guide</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="download.html">Download</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3 class="footer-heading">Contact</h3>
+        <p><strong>PenMe Inc.</strong><br>Delaware-based company<br>Contact: contact@penme.app</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2023 PenMe. All rights reserved. | <span class="powered-by">Powered by PenMe</span>
+    </div>
+  </footer>
+</body>
+
+</html>
