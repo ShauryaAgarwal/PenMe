@@ -8,15 +8,21 @@
   <style>
     /* Font */
     @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+    @import url("https://fonts.googleapis.com/css?family=Leckerli One");
 
     body {
       font-family: "Montserrat", sans-serif;
     }
 
-    /* Global Styles */
-    body {
+    /* Reset default styles */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Global Styles */
+    body {
       background-color: #f8f8f8;
     }
 
@@ -27,55 +33,180 @@
     }
 
     /* Navigation */
-    nav {
-      background-color: #333;
-      padding: 20px;
+    .top-nav {
       display: flex;
+      flex-direction: row;
       align-items: center;
       justify-content: space-between;
+      background-color: #011627;
+      background: linear-gradient(to left, #011627, #465666);
+      color: #fff;
+      padding-left: 20px;
+      padding-right: 20px;
     }
 
     .logo img {
-      height: 50px;
-      margin-right: 15px;
+      height: 55px;
+      margin-right: 10px;
       vertical-align: middle;
+      border: 1px solid #000;
     }
 
     .logo-text {
-      font-size: 28px;
-      font-weight: bold;
+      font-family: "Leckerli One";
+      font-size: 32px;
       color: #fff;
-      line-height: 30px;
+      line-height: 90px;
       vertical-align: middle;
     }
 
-    .nav-links {
-      list-style: none;
+    .menu {
+      list-style-type: none;
       display: flex;
+      flex-direction: row;
+      overflow: hidden;
     }
 
-    .nav-links li {
-      margin-left: 30px;
-    }
-
-    .nav-links li a {
+    .menu a {
+      margin-left: 5px;
+      padding: 15px;
+      padding-top: 35px;
+      padding-bottom: 35px;
+      overflow: hidden;
       text-decoration: none;
       color: #fff;
       font-weight: bold;
       font-size: 18px;
     }
 
+    .menu a:hover {
+      background-color: #323232;
+    }
+
+    .menu-button-container {
+      display: none;
+      height: 100%;
+      width: 35px;
+      cursor: pointer;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #menu-toggle {
+      position: absolute;
+      display: block;
+      height: 35px;
+      width: 35px;
+      top: 27px;
+      right: 20px;
+      z-index: 5;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .menu-button,
+    .menu-button::before,
+    .menu-button::after {
+      display: block;
+      background-color: #fff;
+      position: absolute;
+      height: 4px;
+      width: 35px;
+      transition: transform 500ms cubic-bezier(0.14, 0.63, 0.35, 0.88);
+      border-radius: 2px;
+    }
+
+    .menu-button::before {
+      content: "";
+      margin-top: -8px;
+    }
+
+    .menu-button::after {
+      content: "";
+      margin-top: 8px;
+    }
+
+    #menu-toggle:checked+.menu-button-container .menu-button::before {
+      margin-top: 0px;
+      transform: rotate(225deg);
+    }
+
+    #menu-toggle:checked+.menu-button-container .menu-button {
+      background: rgba(255, 255, 255, 0);
+    }
+
+    #menu-toggle:checked+.menu-button-container .menu-button::after {
+      margin-top: 0px;
+      transform: rotate(-225deg);
+    }
+
+    @media (max-width: 1024px) {
+      .menu-button-container {
+        display: flex;
+      }
+
+      .menu {
+        position: absolute;
+        top: 0;
+        margin-top: 90px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #menu-toggle~.menu a {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 300ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      #menu-toggle:checked~.menu a {
+        border: 1px solid #333;
+        height: 3em;
+        padding: 0.75em;
+        transition: height 300ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      .menu>a {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: white;
+        background-color: #222;
+      }
+
+      .menu>a:not(:last-child) {
+        border-bottom: 1px solid #444;
+      }
+    }
+
+    .section-banner-divider {
+      background-color: #000;
+      height: 2px;
+      width: 100%;
+    }
+
     /* Main Banner */
     .main-banner {
       background-color: #7d8790;
       color: #fff;
-      padding: 100px 0;
-      height: 200px;
+      padding-top: 150px;
+      padding-left: 25px;
+      padding-right: 25px;
+      height: 400px;
       text-align: center;
     }
 
     .banner-title {
       font-size: 48px;
+      padding-bottom: 30px;
       font-weight: bold;
     }
 
@@ -99,6 +230,7 @@
       font-weight: bold;
       color: #011627;
       margin-bottom: 10px;
+      padding-top: 35px;
     }
 
     .company-description {
@@ -112,7 +244,7 @@
     }
 
     .section-subtitle {
-      font-size: 24px;
+      font-size: 28px;
       font-weight: bold;
       color: #011627;
       margin-bottom: 10px;
@@ -192,21 +324,26 @@
 
 <body>
   <!-- Navigation -->
-  <nav>
+  <section class="top-nav">
     <div class="logo">
       <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/69/d4/d8/69d4d883-45db-1f7a-a03d-c059a8884486/AppIcon-0-0-1x_U007emarketing-0-7-0-0-85-220.png/230x0w.webp" alt="PenMe Logo">
       <span class="logo-text">PenMe</span>
     </div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="features.html">Features</a></li>
-      <li><a href="guide.html">Guide</a></li>
-      <li><a href="testimonials.html">Testimonials</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="download.html">Download</a></li>
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+      <div class='menu-button'></div>
+    </label>
+    <ul class="menu">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="guide.html">Guide</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="download.html">Download</a>
     </ul>
-  </nav>
+  </section>
+  <div class="section-banner-divider"></div>
 
   <!-- Main Banner -->
   <section class="main-banner">
@@ -215,6 +352,7 @@
       <p class="banner-subtitle">Get to know the story behind PenMe and our commitment to revolutionizing digital communication with a personal touch.</p>
     </div>
   </section>
+  <div class="section-banner-divider"></div>
 
   <!-- Page Content -->
   <section class="content-section">
@@ -236,6 +374,7 @@
       </div>
     </div>
   </section>
+  <div class="section-banner-divider"></div>
 
   <!-- Footer -->
   <footer>
