@@ -83,10 +83,46 @@
       font-size: 18px;
     }
 
-    /* Content Section */
-    .content-section {
-      background-color: #fff;
-      padding: 50px 0;
+    /* Page Content */
+    .about-section {
+      text-align: left;
+    }
+
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .section-title {
+      font-size: 36px;
+      font-weight: bold;
+      color: #011627;
+      margin-bottom: 10px;
+    }
+
+    .company-description {
+      font-size: 18px;
+      color: #666666;
+      margin-bottom: 20px;
+    }
+
+    .section-details {
+      margin-top: 20px;
+    }
+
+    .section-subtitle {
+      font-size: 24px;
+      font-weight: bold;
+      color: #011627;
+      margin-bottom: 10px;
+    }
+
+    .mission-statement,
+    .domain {
+      font-size: 18px;
+      color: #666666;
+      margin-bottom: 30px;
     }
 
     /* Footer */
@@ -183,9 +219,21 @@
   <!-- Page Content -->
   <section class="content-section">
     <div class="container">
-      <!-- Placeholder content for the About page -->
-      <h2>Coming Soon!</h2>
-      <p>Stay tuned as we update this page with a description of the team behind the scenes at PenMe.</p>
+      <!-- About Us Section -->
+      <div class="about-section">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-content">
+          <p class="company-description">Founded in 2019 as a start-up based in Silicon Valley and New Jersey, Indeca Group Inc. (Indeca) brings in disruptive and patent-pending solutions to digitally transform the personal messaging, e-cards, and digital payment domains. We make communication natural, using a digital pen or your fingertips literally.</p>
+          <div class="section-details">
+            <h3 class="section-subtitle">Our Mission</h3>
+            <p class="mission-statement">At PenMe, we aim to bring back the personal touch in digital communication by providing a one-stop-shop solution for exchanging handwritten messages, letters, greeting cards with integrated collaboration workflow, and payment modules. Our in-built 'patent-pending' technology makes handwritten messaging easy and intuitive, using a digital pen or fingers on any device type or size.</p>
+          </div>
+          <div class="section-details">
+            <h3 class="section-subtitle">Domain</h3>
+            <p class="domain">Our domain expertise includes Handwritten Messaging, e-Cards, Digital Payments, and Group Collaboration.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
