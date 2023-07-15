@@ -8,14 +8,14 @@ export default async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-      user: 'shaurya220@gmail.com', // Your Gmail address
-      pass: 'bumble17', // Your Gmail password or application-specific password
+      user: 'davincisdesigns@gmail.com', // Your Gmail address
+      pass: 'Lint!!73', // Your Gmail password or application-specific password
     },
   });
 
   // Create the email message
   const mailOptions = {
-    from: 'shaurya220@gmail.com', // Sender email address (must be the same as the authenticated user)
+    from: 'davincisdesigns@gmail.com', // Sender email address (must be the same as the authenticated user)
     to: 'shaurya5525@gmail.com', // Recipient email address
     subject: 'New Contact Form Submission',
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
