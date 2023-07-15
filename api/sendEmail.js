@@ -1,6 +1,5 @@
 const nodemailer = require('nodemailer');
 
-console.log('Test Log Statement');
 export default async (req, res) => {
   try {
     console.log('Received request to send email');
