@@ -16,7 +16,7 @@ export default async (req, res) => {
   // Create the email message
   const mailOptions = {
     from: 'sunil@indecagroup.com', // Sender email address (must be the same as the authenticated user)
-    to: 'shaurya5525@gmail.com', // Recipient email address
+    to: 'shaurya220@gmail.com', // Recipient email address
     subject: 'New Contact Form Submission',
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };
