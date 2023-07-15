@@ -5,18 +5,18 @@ export default async function handler(req, res) {
 
   // Create a Nodemailer transporter using your email service details
   const transporter = nodemailer.createTransport({
-    service: "YourEmailService",
+    service: "Gmail",
     auth: {
-      user: "YourEmailAddress",
-      pass: "YourEmailPassword",
+      user: "shaurya220@gmail.com",
+      pass: "bumble17",
     },
   });
 
   try {
     // Send the email
     await transporter.sendMail({
-      from: "YourEmailAddress",
-      to: "user@gmail.com",
+      from: "shaurya220@gmail.com",
+      to: "shaurya5525@gmail.com",
       subject: "New Contact Form Submission",
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     });
