@@ -1,0 +1,20 @@
+# Home page
+/home /index.html 200
+
+# Features page
+/features /features.html 200
+
+# Guide page
+/guide /guide.html 200
+
+# Testimonials page
+/testimonials /testimonials.html 200
+
+# About page
+/about /about.html 200
+
+# Contact page
+/contact /contact.html 200
+
+# Download page
+/download /download.html 200
