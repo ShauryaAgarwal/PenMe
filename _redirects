@@ -1,8 +1,8 @@
 # Home page
-/home /index.html 200
+/home index.html 200
 
 # Features page
-/features /features.html 200
+/features features.html 200
 
 # Guide page
 /guide /guide.html 200
