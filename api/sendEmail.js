@@ -20,7 +20,7 @@ export default async (req, res) => {
     // Create the email message
     const mailOptions = {
       from: process.env.EMAIL_USER, // Sender email address (must be the same as the authenticated user)
-      to: 'admin@penme.app', // Recipient email address
+      to: 'contact@penme.app', // Recipient email address
       subject: 'New Contact Form Submission',
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     };
