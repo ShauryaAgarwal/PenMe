@@ -1,0 +1,401 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PenMe - Privacy Policy</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    /* Font */
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+    @import url("https://fonts.googleapis.com/css?family=Leckerli One");
+
+    body {
+      font-family: "Montserrat", sans-serif;
+    }
+
+    /* Reset default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Global Styles */
+    body {
+      background-color: #f8f8f8;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Navigation */
+    .top-nav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #011627;
+      background: linear-gradient(to left, #011627, #465666);
+      color: #fff;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .logo img {
+      height: 55px;
+      margin-right: 10px;
+      vertical-align: middle;
+      border: 1px solid #000;
+    }
+
+    .logo-text {
+      font-family: "Leckerli One";
+      font-size: 32px;
+      color: #fff;
+      line-height: 90px;
+      vertical-align: middle;
+    }
+
+    .menu {
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+    }
+
+    .menu a {
+      margin-left: 5px;
+      padding: 15px;
+      padding-top: 35px;
+      padding-bottom: 35px;
+      overflow: hidden;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .menu a:hover {
+      background-color: #323232;
+    }
+
+    .menu-button-container {
+      display: none;
+      height: 100%;
+      width: 35px;
+      cursor: pointer;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #menu-toggle {
+      position: absolute;
+      display: block;
+      height: 35px;
+      width: 35px;
+      top: 27px;
+      right: 20px;
+      z-index: 5;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .menu-button,
+    .menu-button::before,
+    .menu-button::after {
+      display: block;
+      background-color: #fff;
+      position: absolute;
+      height: 4px;
+      width: 35px;
+      transition: transform 500ms cubic-bezier(0.14, 0.63, 0.35, 0.88);
+      border-radius: 2px;
+    }
+
+    .menu-button::before {
+      content: "";
+      margin-top: -8px;
+    }
+
+    .menu-button::after {
+      content: "";
+      margin-top: 8px;
+    }
+
+    #menu-toggle:checked+.menu-button-container .menu-button::before {
+      margin-top: 0px;
+      transform: rotate(225deg);
+    }
+
+    #menu-toggle:checked+.menu-button-container .menu-button {
+      background: rgba(255, 255, 255, 0);
+    }
+
+    #menu-toggle:checked+.menu-button-container .menu-button::after {
+      margin-top: 0px;
+      transform: rotate(-225deg);
+    }
+
+    @media (max-width: 1024px) {
+      .menu-button-container {
+        display: flex;
+      }
+
+      .menu {
+        position: absolute;
+        top: 0;
+        margin-top: 90px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #menu-toggle~.menu a {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 300ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      #menu-toggle:checked~.menu a {
+        border: 1px solid #333;
+        height: 3em;
+        padding: 0.75em;
+        transition: height 300ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      .menu>a {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: white;
+        background-color: #222;
+      }
+
+      .menu>a:not(:last-child) {
+        border-bottom: 1px solid #444;
+      }
+    }
+
+    .section-banner-divider {
+      background-color: #000;
+      height: 2px;
+      width: 100%;
+    }
+
+    /* Main Banner */
+    .main-banner {
+      background-color: #7d8790;
+      color: #fff;
+      padding-top: 150px;
+      padding-left: 25px;
+      padding-right: 25px;
+      height: 400px;
+      text-align: center;
+    }
+
+    .banner-title {
+      font-size: 48px;
+      padding-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .banner-subtitle {
+      font-size: 18px;
+    }
+
+    /* Content Section */
+    .content-section {
+      background-color: #fff;
+      padding: 50px 0;
+    }
+
+    .policy-section {
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #f0f0f0;
+      border-radius: 8px;
+    }
+
+    .policy-section h3 {
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .policy-section p {
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #011627;
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .footer-columns {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .footer-column {
+      flex: 0 0 30%;
+      flex-basis: 30%;
+      margin-bottom: 20px;
+    }
+
+    .footer-column p {
+      margin-bottom: 15px;
+    }
+
+    .footer-column:last-child p {
+      line-height: 1.5;
+    }
+
+    .footer-heading {
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .footer-menu {
+      text-align: center;
+    }
+
+    .footer-menu ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-menu li {
+      margin-bottom: 10px;
+      max-width: 120px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-menu li a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .footer-bottom {
+      font-size: 14px;
+    }
+
+    .powered-by {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <section class="top-nav">
+    <div class="logo">
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/69/d4/d8/69d4d883-45db-1f7a-a03d-c059a8884486/AppIcon-0-0-1x_U007emarketing-0-7-0-0-85-220.png/230x0w.webp" alt="PenMe Logo">
+      <span class="logo-text">PenMe</span>
+    </div>
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+      <div class='menu-button'></div>
+    </label>
+    <ul class="menu">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="guide.html">Guide</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="download.html">Download</a>
+    </ul>
+  </section>
+  <div class="section-banner-divider"></div>
+
+  <!-- Main Banner -->
+  <section class="main-banner">
+    <div class="banner-content">
+      <h1 class="banner-title">Privacy Policy</h1>
+      <p class="banner-subtitle">Learn how we collect, use, and protect your personal data by reading our comprehensive privacy policy.</p>
+    </div>
+  </section>
+  <div class="section-banner-divider"></div>
+
+  <!-- Page Content -->
+  <section class="content-section">
+    <div class="container">
+      <div class="policy-section">
+        <h3>Purpose of the PenMe App</h3>
+        <p>The PenMe app is designed to enable users to communicate with friends, family, colleagues, and other acquaintances through personalized handwritten messages. By using PenMe, users agree to utilize the app solely for its intended personal communication purposes.</p>
+      </div>
+      <div class="policy-section">
+        <h3>Account Security</h3>
+        <p>Each user is assigned a unique password and login. This information is personal and should not be shared with third parties without explicit consent. Users are responsible for maintaining the confidentiality of their account credentials and should ensure proper security measures are in place.</p>
+      </div>
+      <div class="policy-section">
+        <h3>User Conduct</h3>
+        <p>Users must refrain from submitting material that is unlawful, obscene, defamatory, libelous, threatening, pornographic, harassing, hateful, racially, or ethnically offensive. Such conduct may lead to criminal offense, civil liability, or other legal actions.</p>
+      </div>
+      <div class="policy-section">
+        <h3>Content Responsibility</h3>
+        <p>Users are solely responsible for the content they send through the PenMe app. Indecagroup Inc. reserves the right to monitor and act upon any fraudulent or illegal activities connected to the content transmitted via the app.</p>
+      </div>
+      <div class="policy-section">
+        <h3>Reporting Obligations</h3>
+        <p>Users should promptly report any fraudulent or illegal content received to PenMe Support. Our team is committed to maintaining a safe environment and will take necessary actions against offending users or content.</p>
+      </div>
+      <div class="policy-section">
+        <h3>Privacy and Data Protection</h3>
+        <p>PenMe requires a user's email for verification at signup and does not share personal information with third parties. The information collected is solely for enhancing user experience and protecting against fraudulent use.</p>
+      </div>
+    </div>
+  </section>
+  <div class="section-banner-divider"></div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h3 class="footer-heading">About</h3>
+        <p>Founded in 2019 as a Delaware-based start-up, PenMe brings in disruptive and patent-pending solutions to digitally transform the personal messaging, e-cards, and digital payment domains. We make communication natural using a digital pen or your fingertips.</p>
+      </div>
+      <div class="footer-column">
+        <div class="footer-menu">
+          <h3 class="footer-heading">Navigation</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="guide.html">Guide</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3 class="footer-heading">Contact</h3>
+        <p><strong>PenMe Inc.</strong><br>Delaware-based company<br>Contact: contact@penme.app</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2023 PenMe. All rights reserved. | <span class="powered-by">Powered by PenMe</span>
+    </div>
+  </footer>
+</body>
+
+</html>
